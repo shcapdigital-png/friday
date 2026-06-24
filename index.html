@@ -437,6 +437,20 @@
   .stp-btn.primary:disabled{background:rgba(255,255,255,.04);border-color:var(--line);color:var(--muted)}
   .stp-count{font-size:12px;color:var(--dim);font-family:var(--mono)}
   #stpCur{color:#fff;font-weight:800}
+  /* weekly cycle */
+  .lead b{color:var(--fg);font-weight:700}
+  .week{margin-top:22px}
+  .wday{display:flex;align-items:center;gap:13px;padding:13px 14px;border:1px solid var(--line);background:var(--card);border-radius:12px;margin-top:8px}
+  .wday .wd{flex:none;width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.06);color:var(--muted);font-weight:800;font-size:14px;display:grid;place-items:center}
+  .wday .wc{flex:1}
+  .wday .wt{font-weight:800;font-size:14px}
+  .wday .wsub{font-size:11.5px;color:var(--dim);margin-top:2px}
+  .wday.dday{border-color:rgba(255,37,66,.45);background:linear-gradient(120deg,rgba(255,37,66,.1),var(--card));box-shadow:0 0 26px -10px rgba(255,37,66,.45)}
+  .wday.dday .wd{background:var(--red);color:#fff}
+  .wday.dday .wt{color:#fff}
+  .wday.dday .wt .dbadge{font-size:9px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--red);padding:2px 7px;border-radius:5px;margin-left:8px;vertical-align:middle}
+  .wday.dday .wsub{color:var(--red-soft);font-weight:600}
+  .week-note{font-size:11.5px;color:var(--muted);text-align:center;margin-top:13px;line-height:1.5}
   @media(min-width:520px){ .wrap{max-width:480px} }
 </style>
 
@@ -492,7 +506,16 @@
   <div class="wrap">
     <div class="ko-h rv">The Problem · 현장</div>
     <h2 class="rv">목요일 오전 10시 — 오후 4시,<br><span class="hl">720건의 비교</span>가 시작된다.</h2>
-    <p class="lead rv d1">매월 2~3회, 단 6시간 안에 6종 서류 30여 개 발행조건을 사람이 직접 대조합니다. 인원을 늘려도 사고 확률은 비례해 줄지 않습니다.</p>
+    <p class="lead rv d1">회사채는 매월 2~3회, 월~금으로 이어지는 <b>일괄신고 발행 사이클</b>로 진행됩니다. 그 중 <b>목요일이 공시일(D-DAY)</b> — 오전 10시에 받은 6종 서류를 오후 4시 공시까지, 단 6시간 안에 검증해야 합니다.</p>
+
+    <div class="week rv d1">
+      <div class="wday"><div class="wd">월</div><div class="wc"><div class="wt">모집일</div><div class="wsub">시장 태핑 · 수요예측 준비</div></div></div>
+      <div class="wday"><div class="wd">화</div><div class="wc"><div class="wt">발행개요</div><div class="wsub">증권사 전달 · 기준값 확정</div></div></div>
+      <div class="wday"><div class="wd">수</div><div class="wc"><div class="wt">종가일</div><div class="wsub">저녁 7시 반 기준값 확정 · 자료 준비</div></div></div>
+      <div class="wday dday"><div class="wd">목</div><div class="wc"><div class="wt">공시일<span class="dbadge">D-DAY</span></div><div class="wsub">오전 10시 수취 → 오후 4시 공시 · 검증은 이 6시간 안에</div></div></div>
+      <div class="wday"><div class="wd">금</div><div class="wc"><div class="wt">발행일</div><div class="wsub">자금 납입 · 결산 · 보고</div></div></div>
+    </div>
+    <div class="week-note rv d1">검증 방식이 노동집약적인 한, 인원을 늘려도 사고 확률은 비례해 줄지 않습니다.</div>
     <div class="grid3">
       <div class="stat rv d1"><div class="lab">소요 시간</div><div class="num">6<small>시간</small></div></div>
       <div class="stat rv d2"><div class="lab">동원 인력</div><div class="num">10<small>명+</small></div></div>
