@@ -440,17 +440,39 @@
   /* weekly cycle */
   .lead b{color:var(--fg);font-weight:700}
   .week{margin-top:22px}
-  .wday{display:flex;align-items:center;gap:13px;padding:13px 14px;border:1px solid var(--line);background:var(--card);border-radius:12px;margin-top:8px}
-  .wday .wd{flex:none;width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.06);color:var(--muted);font-weight:800;font-size:14px;display:grid;place-items:center}
+  .wday{display:flex;align-items:center;gap:13px;padding:13px 14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);border-radius:12px;margin-top:8px}
+  .wday .wd{flex:none;width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.14);color:#fff;font-weight:800;font-size:14px;display:grid;place-items:center}
   .wday .wc{flex:1}
-  .wday .wt{font-weight:800;font-size:14px}
-  .wday .wsub{font-size:11.5px;color:var(--dim);margin-top:2px}
-  .wday.dday{border-color:rgba(255,37,66,.45);background:linear-gradient(120deg,rgba(255,37,66,.1),var(--card));box-shadow:0 0 26px -10px rgba(255,37,66,.45)}
+  .wday .wt{font-weight:800;font-size:14px;color:var(--fg)}
+  .wday .wsub{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .wday.dday{border-color:rgba(255,37,66,.55);background:linear-gradient(120deg,rgba(255,37,66,.16),rgba(255,255,255,.04));box-shadow:0 0 28px -8px rgba(255,37,66,.5)}
   .wday.dday .wd{background:var(--red);color:#fff}
   .wday.dday .wt{color:#fff}
   .wday.dday .wt .dbadge{font-size:9px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--red);padding:2px 7px;border-radius:5px;margin-left:8px;vertical-align:middle}
   .wday.dday .wsub{color:var(--red-soft);font-weight:600}
   .week-note{font-size:11.5px;color:var(--muted);text-align:center;margin-top:13px;line-height:1.5}
+  /* creed — red inverted panel */
+  .creed-panel{border-radius:22px;padding:28px 22px;background:linear-gradient(155deg,var(--red),#c20018 55%,#9c0011);box-shadow:0 26px 64px -24px rgba(255,37,66,.55);position:relative;overflow:hidden}
+  .creed-panel::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 0%,rgba(255,255,255,.18),transparent 55%);pointer-events:none}
+  .creed-eyebrow{text-align:center;font-size:10px;letter-spacing:.13em;color:rgba(255,255,255,.85);font-weight:700;text-transform:uppercase;margin-bottom:14px;position:relative}
+  .creed-slogan{display:block;width:fit-content;max-width:100%;margin:0 auto 18px;font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:100px;padding:6px 13px;background:rgba(255,255,255,.12);text-align:center;position:relative}
+  .creed-slogan b{color:#fff;font-weight:700}
+  .creed-hero{text-align:center;position:relative}
+  .creed-quote{font-size:21px;font-weight:850;line-height:1.5;letter-spacing:-.01em;color:#fff}
+  .creed-quote .hl{background:#fff;color:var(--red-deep);padding:1px 8px;border-radius:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .creed-attr{font-size:12px;color:rgba(255,255,255,.8);margin-top:16px;font-weight:600}
+  .creed-attr b{color:#fff}
+  .creed-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;position:relative}
+  .cmap{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.1);border-radius:14px;padding:15px 14px}
+  .cmap.now{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.42)}
+  .cmap .cy{font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;color:rgba(255,255,255,.78);font-weight:700}
+  .cmap .cmt{font-size:15px;font-weight:850;margin-top:8px;color:#fff}
+  .cmap .cmt .hl{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.55);text-underline-offset:3px}
+  .cmap .cmd{font-size:11.5px;color:rgba(255,255,255,.85);margin-top:9px;line-height:1.55}
+  .cmap .cmd b{color:#fff;font-weight:700}
+  .creed-bridge{margin-top:14px;border-radius:14px;padding:17px;text-align:center;background:rgba(0,0,0,.22);position:relative}
+  .creed-bridge .cbt{font-size:13.5px;line-height:1.6;font-weight:600;color:#fff}
+  .creed-bridge .cbt b{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.5);text-underline-offset:3px}
   @media(min-width:520px){ .wrap{max-width:480px} }
 </style>
 
@@ -478,12 +500,28 @@
 <!-- GROUP CREED -->
 <section class="creed">
   <div class="wrap">
-    <div class="creed-card rv">
-      <div class="creed-src">신한금융그룹 2025·2026 신년사 · 주주서신</div>
-      <div class="creed-h"><span class="hl">내부통제</span>가 곧 신한의<br>차별화된 경쟁력</div>
-      <div class="creed-q">"잠깐의 실수와 방심에도 어렵게 쌓은 <b>신뢰가 한순간에 무너질 수 있습니다.</b> 모든 임직원이 업의 윤리를 바로 세우고, <b>빈틈없는 내부통제 시스템</b>을 만들어 가야 합니다."</div>
-      <div class="creed-by">— 신한금융그룹 신년사</div>
-      <div class="creed-link">「프라이데이」는 그 <b>신뢰</b>를,<br>회사채 발행 전 마지막 1%에서 지킵니다.</div>
+    <div class="creed-panel rv">
+      <div class="creed-eyebrow">신한금융그룹 2025 · 2026 신년사 &amp; 주주서신</div>
+      <div class="creed-slogan"><b>Great Challenge 2030</b> · 미래 금융을 향한 대담한 실행</div>
+      <div class="creed-hero">
+        <div class="creed-quote">"2026년은 이해관계자의 <span class="hl">신뢰</span>를 기반으로<br>새롭게 도약하는 한 해"</div>
+        <div class="creed-attr">— 신한금융그룹 <b>진옥동 회장님</b> · 2026 신년사</div>
+      </div>
+      <div class="creed-grid">
+        <div class="cmap">
+          <div class="cy">2025 · 주주서신</div>
+          <div class="cmt">신뢰를 <span class="hl">지킨다</span></div>
+          <div class="cmd"><b>내부통제가 곧 차별화된 경쟁력.</b> 어렵게 쌓은 신뢰는 한순간에 무너질 수 있다.</div>
+        </div>
+        <div class="cmap now">
+          <div class="cy">2026 · 신년사</div>
+          <div class="cmt">신뢰로 <span class="hl">도약한다</span></div>
+          <div class="cmd"><b>책무구조도의 실효성 있는 운영</b>으로 내부통제 완성 · <b>Agentic AI</b>를 생존 과제로 제시.</div>
+        </div>
+      </div>
+      <div class="creed-bridge">
+        <div class="cbt">「프라이데이」는 <b>Agentic AI</b>로 책무구조도의 내부통제를 실행해 — 2026 도약의 기반인 <b>'신뢰'</b>를 회사채 발행 전 마지막 1%에서 지킵니다.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -546,7 +584,7 @@
     <div class="steps">
       <div class="step rv d1"><div class="ix">1</div><div class="sc"><div class="tag">Upload</div><div class="st">파일 업로드</div><div class="sd">SharePoint 입력 폴더에 발행개요 + 공시서류 PDF 6종을 올립니다.</div><div class="tm">≈ 30초</div></div></div>
       <div class="step rv d2"><div class="ix">2</div><div class="sc"><div class="tag">Invoke</div><div class="st">회차번호 입력</div><div class="sd">Copilot 채팅창에 <code>"OOO회차 검증해줘"</code> 한 줄이면, 6종 공시서류가 모두 자동으로 교차검증됩니다.</div><div class="tm">≈ 10초</div></div></div>
-      <div class="step rv d3"><div class="ix">3</div><div class="sc"><div class="tag">AI Core</div><div class="st">AI 자동 처리</div><div class="sd">OCR → 파싱 → 50+ 항목 교차검증 → FAIL·WARN 분류 → 표준 리포트 자동 저장.</div><div class="tm">≈ 3분</div></div></div>
+      <div class="step rv d3"><div class="ix">3</div><div class="sc"><div class="tag">AI Core</div><div class="st">AI 자동 처리</div><div class="sd">OCR → 파싱 → 수백 개 항목 교차검증 → FAIL·WARN 분류 → 표준 리포트 자동 저장.</div><div class="tm">≈ 3분</div></div></div>
     </div>
     <div class="humans rv d3">사람이 개입하는 지점은 <b>회차번호 입력</b>과 <b>FAIL·WARN 정정 결정</b>, 단 두 곳뿐입니다.</div>
   </div>
@@ -813,7 +851,7 @@
         <div class="phase-top"><div class="pp">P1</div><div class="pdate">2026.04<br>— NOW</div></div>
         <div class="badge on">운영 중</div>
         <div class="ph2">공시서류 자동 검증</div>
-        <ul><li>6종 공시서류 자동 교차 검증</li><li>50+ 검증 항목 자동 대조</li><li>표준 리포트 자동 생성 · 보존</li></ul>
+        <ul><li>6종 공시서류 자동 교차 검증</li><li>수백 개 검증 항목 자동 대조</li><li>표준 리포트 자동 생성 · 보존</li></ul>
         <div class="pres">운영 실적 — <b>12시간 → 5분</b>, 검증 완료</div>
       </div>
       <div class="phase rv d2">
