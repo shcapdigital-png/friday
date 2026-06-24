@@ -356,6 +356,87 @@
   .creed-by{font-size:11px;color:var(--dim);margin-top:14px;font-weight:600;position:relative}
   .creed-link{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);font-size:13.5px;color:var(--fg);font-weight:600;line-height:1.55;position:relative}
   .creed-link b{color:var(--red)}
+  /* file icon variants */
+  .ops-file .ico.pdf{background:#ffe9e9;color:#d62b2b;font-size:7px}
+  .ops-file .ico.xls{background:#e3f7ec;color:#1f8f5b;font-size:7px}
+  /* how to use */
+  .howto{padding:60px 0}
+  .howto-steps{margin-top:14px}
+  .ht-step{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:15px 16px;margin-top:10px}
+  .ht-step .ht-n{flex:none;width:30px;height:30px;border-radius:9px;background:var(--red);color:#fff;font-weight:850;font-size:14px;display:grid;place-items:center;font-family:var(--mono)}
+  .ht-step .ht-c{flex:1}
+  .ht-step .ht-t{font-weight:800;font-size:15px}
+  .ht-step .ht-d{font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.55}
+  .ht-step .ht-d code{font-family:var(--mono);font-size:11.5px;color:var(--red-soft);background:rgba(255,37,66,.1);padding:1px 6px;border-radius:5px}
+  .ht-step .ht-d b{color:var(--fg);font-family:var(--mono);font-weight:600}
+  .ht-step .ht-m{font-size:11px;color:var(--red-soft);font-weight:700;margin-top:6px;font-family:var(--mono)}
+  .howto-note{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .htag{font-size:11px;padding:7px 12px;border-radius:100px;border:1px solid var(--line);background:var(--card);color:var(--muted);font-weight:600}
+  .htag.no{color:#c98a8a}
+  .htag.yes{color:#fff;border-color:rgba(255,37,66,.35);background:rgba(255,37,66,.12)}
+  /* mockup walkthrough */
+  .walk{margin-top:20px}
+  .wlabel{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .wlabel .wn{flex:none;width:28px;height:28px;border-radius:8px;background:var(--red);color:#fff;font-weight:850;font-size:13px;display:grid;place-items:center;font-family:var(--mono)}
+  .wlabel b{font-size:14px;font-weight:800;display:block}
+  .wlabel span{font-size:11.5px;color:var(--muted);display:block;margin-top:1px}
+  .wconn{display:flex;justify-content:center;padding:6px 0;color:var(--red)}
+  .mw{background:#f4f6fa;border-radius:14px;overflow:hidden;box-shadow:0 18px 44px -22px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.05)}
+  .mw-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#e9edf3;border-bottom:1px solid #dfe4ec}
+  .mw-bar .dt{width:9px;height:9px;border-radius:50%;flex:none}
+  .mw-bar .r{background:#ff5f57}.mw-bar .y{background:#febc2e}.mw-bar .g{background:#28c840}
+  .mw-bar .mw-url{margin-left:8px;font-size:10px;color:#8a90a0;font-family:var(--mono);background:#fff;border:1px solid #dfe4ec;border-radius:6px;padding:3px 9px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mw-body{padding:14px}
+  .sp-head{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;color:#2b3a67}
+  .sp-head::before{content:'';width:16px;height:16px;border-radius:4px;background:#2b6fd6;flex:none}
+  .sp-crumb{font-size:11px;color:#5a6072;margin-top:11px}
+  .sp-crumb b{color:#0f1320}
+  .spf{display:flex;align-items:center;gap:9px;font-size:11px;color:#2a2f3a;font-family:var(--mono);padding:8px 10px;background:#fff;border:1px solid #eef0f5;border-radius:8px;margin-top:7px}
+  .spf .fi2{width:20px;height:20px;border-radius:5px;display:grid;place-items:center;font-size:7px;font-weight:800;flex:none}
+  .spf .fi2.x{background:#e3f7ec;color:#1f8f5b}.spf .fi2.p{background:#ffe9e9;color:#d62b2b}
+  .sp-drop{margin-top:9px;border:2px dashed #b9c6e0;border-radius:10px;padding:14px;text-align:center;font-size:11px;color:#5d7cb5;background:#f0f5ff;font-weight:600;display:flex;align-items:center;justify-content:center;gap:7px}
+  .cp-agent{display:flex;align-items:center;gap:8px;padding-bottom:11px;border-bottom:1px solid #e9ecf2}
+  .cp-ava{width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,#e30016,#ff2542);display:grid;place-items:center;color:#fff;font-weight:800;font-size:12px;flex:none}
+  .cp-nm{font-size:12px;font-weight:800;color:#1a1d26}
+  .cp-nm i{color:#1f8f5b;font-style:normal}
+  .cp-hint{font-size:10.5px;color:#8a90a0;margin:12px 0 8px}
+  .cp-input{display:flex;align-items:center;gap:8px;border:1.5px solid #2f6bff;border-radius:11px;padding:10px 12px;background:#fff;box-shadow:0 0 0 3px rgba(47,107,255,.12)}
+  .cp-typed{flex:1;font-size:13px;color:#1a1d26;font-weight:600}
+  .cp-typed .caret{display:inline-block;width:2px;height:14px;background:#2f6bff;margin-left:1px;vertical-align:middle;animation:blink 1s step-end infinite}
+  @keyframes blink{50%{opacity:0}}
+  .cp-send{width:26px;height:26px;border-radius:8px;background:#2f6bff;color:#fff;display:grid;place-items:center;flex:none}
+  .rp-title{font-size:12.5px;font-weight:800;color:#0f1320}
+  .rp-grid{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:7px;margin-top:11px}
+  .rpc{background:#fff;border:1px solid #eef0f5;border-radius:9px;padding:9px 6px;text-align:center}
+  .rpc span{font-size:9px;color:#8a90a0;display:block}
+  .rpc b{font-size:18px;display:block;margin-top:2px;font-variant-numeric:tabular-nums}
+  .rpc.pass b{color:#16a565}.rpc.fail b{color:#e23a3a}
+  .rpc.blue{background:linear-gradient(135deg,#2f6bff,#1f4fd6);border:none}
+  .rpc.blue span{color:rgba(255,255,255,.85)}.rpc.blue b{color:#fff}
+  .rp-done{margin-top:10px;font-size:11px;color:#16a565;font-weight:700;display:flex;align-items:center;gap:6px;background:#eefaf2;border-radius:8px;padding:9px 11px}
+  /* how-to stepper */
+  .stepper{margin-top:20px;border:1px solid var(--line);border-radius:18px;padding:14px;background:var(--card)}
+  .stp-nav{display:flex;gap:6px}
+  .stp-pill{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;font-size:11.5px;font-weight:700;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;padding:9px 5px;cursor:pointer;transition:all .25s}
+  .stp-pill .sp-n{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--muted);font-size:10px;font-weight:800;display:grid;place-items:center;font-family:var(--mono);transition:all .25s;flex:none}
+  .stp-pill.active{color:#fff;border-color:rgba(255,37,66,.4);background:rgba(255,37,66,.12)}
+  .stp-pill.active .sp-n{background:var(--red);color:#fff}
+  .stp-prog{height:3px;border-radius:3px;background:rgba(255,255,255,.08);margin-top:12px;overflow:hidden}
+  .stp-prog i{display:block;height:100%;width:33.33%;background:linear-gradient(90deg,var(--red-deep),var(--red));border-radius:3px;transition:width .35s cubic-bezier(.2,.7,.2,1)}
+  .stp-stage{margin-top:14px;position:relative}
+  .stp-panel{display:none;animation:fadeIn .35s ease}
+  .stp-panel.active{display:block}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .stp-cap{font-size:12.5px;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+  .stp-cap b{color:var(--fg);font-weight:800;font-size:13.5px}
+  .stp-cap em{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--red-soft);font-weight:700;margin-left:auto;background:rgba(255,37,66,.1);padding:3px 8px;border-radius:6px}
+  .stp-ctrl{display:flex;align-items:center;justify-content:space-between;margin-top:16px}
+  .stp-btn{font-family:inherit;font-size:12.5px;font-weight:700;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:9px 16px;cursor:pointer;transition:all .2s}
+  .stp-btn:disabled{opacity:.35;cursor:default}
+  .stp-btn.primary{color:#fff;background:var(--red);border-color:var(--red)}
+  .stp-btn.primary:disabled{background:rgba(255,255,255,.04);border-color:var(--line);color:var(--muted)}
+  .stp-count{font-size:12px;color:var(--dim);font-family:var(--mono)}
+  #stpCur{color:#fff;font-weight:800}
   @media(min-width:520px){ .wrap{max-width:480px} }
 </style>
 
@@ -462,7 +543,7 @@
       <div class="ba-row"><div class="rl">소요 시간</div><div class="rb">6시간<small>/ 인</small></div><div class="ra">5분<small>98%↓</small></div></div>
       <div class="ba-row"><div class="rl">관여 인력</div><div class="rb">10명+<small>교차 확인</small></div><div class="ra">1명<small>모니터링</small></div></div>
       <div class="ba-row"><div class="rl">검증 항목</div><div class="rb">720건<small>수기 눈검증</small></div><div class="ra">수백 건<small>AI 자동</small></div></div>
-      <div class="ba-row"><div class="rl">검증 방식</div><div class="rb">출력물<small>분담 대조</small></div><div class="ra">OCR·교차<small>자동 매칭</small></div></div>
+      <div class="ba-row"><div class="rl">검증 방식</div><div class="rb">출력물<small>분담 대조</small></div><div class="ra">에이전트<small>OCR·교차 수행</small></div></div>
       <div class="ba-res">
         <div class="rl">결과</div>
         <div class="rcell bad">⚠ 매 회차 오류 누락 가능성 존재</div>
@@ -550,6 +631,82 @@
       <div class="ops-file"><span class="ico">&lt;&gt;</span><span class="fn">527_검증보고서_2026-06-06_17-36.html</span><span class="fd">6월 6일</span></div>
     </div>
     <div class="ops-note rv d3">523 · 527 · 528 · 529 … <b>회차마다 누적되는 검증 기록</b> — 책무구조도가 요구하는 '입증 가능한 통제'가 노력 없이 자동으로 쌓입니다.</div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="howto">
+  <div class="wrap">
+    <div class="ko-h rv">How to Use · 사용 방법</div>
+    <h2 class="rv">로그인만 하면,<br><span class="hl">세 동작이면 끝.</span></h2>
+    <p class="lead rv d1">서류를 폴더에 올리고, 채팅 한 줄을 입력하면 됩니다. 그 외에 필요한 건 없습니다.</p>
+
+    <div class="stepper rv d1">
+      <div class="stp-nav">
+        <button type="button" class="stp-pill active" data-step="1"><span class="sp-n">1</span>서류 준비</button>
+        <button type="button" class="stp-pill" data-step="2"><span class="sp-n">2</span>검증 요청</button>
+        <button type="button" class="stp-pill" data-step="3"><span class="sp-n">3</span>결과 확인</button>
+      </div>
+      <div class="stp-prog"><i id="stpBar"></i></div>
+
+      <div class="stp-stage">
+        <div class="stp-panel active" data-panel="1">
+          <div class="stp-cap"><b>서류 준비</b> [입력] 폴더에 6종 드래그-앤-드롭<em>약 30초</em></div>
+          <div class="mw">
+            <div class="mw-bar"><span class="dt r"></span><span class="dt y"></span><span class="dt g"></span><span class="mw-url">shinhancap.sharepoint.com</span></div>
+            <div class="mw-body">
+              <div class="sp-head">공시서류검증</div>
+              <div class="sp-crumb">문서 › 공시서류검증 › 입력 › <b>527</b></div>
+              <div class="spf"><span class="fi2 x">XLS</span>527_발행개요.xlsx</div>
+              <div class="spf"><span class="fi2 p">PDF</span>527_일괄신고추가서류.pdf</div>
+              <div class="spf"><span class="fi2 p">PDF</span>527_인수계약서.pdf</div>
+              <div class="sp-drop"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></svg>여기에 6종 공시서류 드래그</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stp-panel" data-panel="2">
+          <div class="stp-cap"><b>검증 요청</b> Copilot에 "OOO회차 검증해줘" 한 줄<em>약 5초</em></div>
+          <div class="mw">
+            <div class="mw-bar"><span class="dt r"></span><span class="dt y"></span><span class="dt g"></span><span class="mw-url">Microsoft 365 Copilot — FRIDAY</span></div>
+            <div class="mw-body">
+              <div class="cp-agent"><span class="cp-ava">F</span><span class="cp-nm">자금팀 에이전트_프라이데이 <i>✓</i></span></div>
+              <div class="cp-hint">채팅창에 회차번호만 입력하면 됩니다</div>
+              <div class="cp-input"><span class="cp-typed">527회차 검증해줘<span class="caret"></span></span><span class="cp-send"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stp-panel" data-panel="3">
+          <div class="stp-cap"><b>결과 확인</b> [결과] 폴더의 리포트 검토<em>약 5분</em></div>
+          <div class="mw">
+            <div class="mw-bar"><span class="dt r"></span><span class="dt y"></span><span class="dt g"></span><span class="mw-url">527_검증보고서_2026-06-06.html</span></div>
+            <div class="mw-body">
+              <div class="rp-title">제527회 회사채 공시서류 검증 리포트</div>
+              <div class="rp-grid">
+                <div class="rpc pass"><span>통과</span><b>81</b></div>
+                <div class="rpc fail"><span>실패</span><b>4</b></div>
+                <div class="rpc blue"><span>통과율</span><b>95.3%</b></div>
+              </div>
+              <div class="rp-done"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>[결과] 폴더에 자동 저장 완료</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stp-ctrl">
+        <button type="button" class="stp-btn" id="stpPrev">← 이전</button>
+        <span class="stp-count"><span id="stpCur">1</span> / 3 단계</span>
+        <button type="button" class="stp-btn primary" id="stpNext">다음 →</button>
+      </div>
+    </div>
+
+    <div class="howto-note rv d4">
+      <span class="htag no">✕ 프로그램 설치</span>
+      <span class="htag no">✕ 매크로 실행</span>
+      <span class="htag no">✕ 외부 시스템 로그인</span>
+      <span class="htag yes">✓ M365 로그인만</span>
+    </div>
   </div>
 </section>
 
@@ -748,4 +905,24 @@
     togRow.setAttribute('aria-expanded',open?'false':'true');
     detailBox.classList.toggle('closed',open);
   });}
+
+  // how-to stepper
+  (function(){
+    var pills=document.querySelectorAll('.stp-pill'),panels=document.querySelectorAll('.stp-panel');
+    var bar=document.getElementById('stpBar'),prev=document.getElementById('stpPrev'),next=document.getElementById('stpNext'),cur=document.getElementById('stpCur');
+    if(!pills.length||!bar) return;
+    var total=panels.length,idx=1;
+    function show(n){
+      idx=Math.max(1,Math.min(total,n));
+      pills.forEach(function(p){p.classList.toggle('active',p.getAttribute('data-step')===String(idx));});
+      panels.forEach(function(p){p.classList.toggle('active',p.getAttribute('data-panel')===String(idx));});
+      bar.style.width=(idx/total*100)+'%';
+      if(cur)cur.textContent=idx;
+      prev.disabled=(idx===1); next.disabled=(idx===total);
+    }
+    pills.forEach(function(p){p.addEventListener('click',function(){show(parseInt(p.getAttribute('data-step'),10));});});
+    prev.addEventListener('click',function(){show(idx-1);});
+    next.addEventListener('click',function(){show(idx+1);});
+    show(1);
+  })();
 </script>
