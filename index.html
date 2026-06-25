@@ -189,7 +189,7 @@
   .pillar .pt{font-size:18px;font-weight:850;margin-top:6px}
   .pillar .pd{font-size:13.5px;color:var(--muted);margin-top:9px;line-height:1.65}
   .pillar .pd b{color:var(--fg);font-weight:700}
-  .pillar .pex{margin-top:12px;font-size:11.5px;color:var(--dim);background:rgba(255,255,255,.03);
+  .pillar .pex{margin-top:12px;font-size:11.5px;color:#fff;background:rgba(255,255,255,.03);
     border-radius:10px;padding:10px 12px;line-height:1.55}
   .pillar .pex b{color:var(--red-soft)}
 
@@ -544,16 +544,17 @@
   <div class="wrap">
     <div class="ko-h rv">The Problem · 현장</div>
     <h2 class="rv">목요일 오전 10시 — 오후 4시,<br><span class="hl">720건의 비교</span>가 시작된다.</h2>
-    <p class="lead rv d1">회사채는 매월 2~3회, 월~금으로 이어지는 <b>일괄신고 발행 사이클</b>로 진행됩니다. 그 중 <b>목요일이 공시일(D-DAY)</b> — 오전 10시에 받은 6종 서류를 오후 4시 공시까지, 단 6시간 안에 검증해야 합니다.</p>
+    <p class="lead rv d1">회사채는 매월 2~3회, 통상 한 주에 걸쳐 진행되는 <b>일괄신고 발행 사이클</b>로 발행됩니다(요일·순서는 회차마다 다릅니다). 그 중 <b>공시일(D-DAY, 예시상 목요일)</b> — 오전 10시에 받은 공시서류 6종을 오후 4시 공시까지, 단 6시간 안에 검증해야 합니다.</p>
 
     <div class="week rv d1">
       <div class="wday"><div class="wd">월</div><div class="wc"><div class="wt">모집일</div><div class="wsub">시장 태핑 · 수요예측 준비</div></div></div>
-      <div class="wday"><div class="wd">화</div><div class="wc"><div class="wt">발행개요</div><div class="wsub">증권사 전달 · 기준값 확정</div></div></div>
-      <div class="wday"><div class="wd">수</div><div class="wc"><div class="wt">종가일</div><div class="wsub">저녁 7시 반 기준값 확정 · 자료 준비</div></div></div>
+      <div class="wday"><div class="wd">화</div><div class="wc"><div class="wt">발행개요</div><div class="wsub">증권사 전달 · 발행조건 확정</div></div></div>
+      <div class="wday"><div class="wd">수</div><div class="wc"><div class="wt">종가일</div><div class="wsub">저녁 7시 반 발행조건 확정 · 자료 준비</div></div></div>
       <div class="wday dday"><div class="wd">목</div><div class="wc"><div class="wt">공시일<span class="dbadge">D-DAY</span></div><div class="wsub">오전 10시 수취 → 오후 4시 공시 · 검증은 이 6시간 안에</div></div></div>
       <div class="wday"><div class="wd">금</div><div class="wc"><div class="wt">발행일</div><div class="wsub">자금 납입 · 결산 · 보고</div></div></div>
     </div>
-    <div class="week-note rv d1">검증 방식이 노동집약적인 한, 인원을 늘려도 사고 확률은 비례해 줄지 않습니다.</div>
+    <div class="week-note rv d1" style="margin-top:12px;color:#fff">※ 위 일정은 대표적인 한 주 예시이며, 실제 요일·순서는 발행 회차마다 달라질 수 있습니다.</div>
+    <div class="week-note rv d1" style="color:#fff">검증 방식이 노동집약적인 한, 인원을 늘려도 사고 확률은 비례해 줄지 않습니다.</div>
     <div class="grid3">
       <div class="stat rv d1"><div class="lab">소요 시간</div><div class="num">6<small>시간</small></div></div>
       <div class="stat rv d2"><div class="lab">동원 인력</div><div class="num">10<small>명+</small></div></div>
@@ -582,7 +583,7 @@
     <h2 class="rv">회차번호 한 번 입력으로,<br><span class="hl">5분 후</span> 리포트 생성.</h2>
     <p class="lead rv d1">그 사이 OCR · 파싱 · 교차검증 · 분류 · 저장은 전부 에이전트가 합니다.</p>
     <div class="steps">
-      <div class="step rv d1"><div class="ix">1</div><div class="sc"><div class="tag">Upload</div><div class="st">파일 업로드</div><div class="sd">SharePoint 입력 폴더에 발행개요 + 공시서류 PDF 6종을 올립니다.</div><div class="tm">≈ 30초</div></div></div>
+      <div class="step rv d1"><div class="ix">1</div><div class="sc"><div class="tag">Upload</div><div class="st">파일 업로드</div><div class="sd">SharePoint 입력 폴더에 발행개요(Excel)와 공시서류(PDF) 6종을 올립니다.</div><div class="tm">≈ 30초</div></div></div>
       <div class="step rv d2"><div class="ix">2</div><div class="sc"><div class="tag">Invoke</div><div class="st">회차번호 입력</div><div class="sd">Copilot 채팅창에 <code>"OOO회차 검증해줘"</code> 한 줄이면, 6종 공시서류가 모두 자동으로 교차검증됩니다.</div><div class="tm">≈ 10초</div></div></div>
       <div class="step rv d3"><div class="ix">3</div><div class="sc"><div class="tag">AI Core</div><div class="st">AI 자동 처리</div><div class="sd">OCR → 파싱 → 수백 개 항목 교차검증 → FAIL·WARN 분류 → 표준 리포트 자동 저장.</div><div class="tm">≈ 3분</div></div></div>
     </div>
@@ -604,7 +605,7 @@
       <div class="ba-row"><div class="rl">소요 시간</div><div class="rb">6시간<small>/ 인</small></div><div class="ra">5분<small>98%↓</small></div></div>
       <div class="ba-row"><div class="rl">관여 인력</div><div class="rb">10명+<small>교차 확인</small></div><div class="ra">1명<small>모니터링</small></div></div>
       <div class="ba-row"><div class="rl">검증 항목</div><div class="rb">720건<small>수기 눈검증</small></div><div class="ra">수백 건<small>AI 자동</small></div></div>
-      <div class="ba-row"><div class="rl">검증 방식</div><div class="rb">출력물<small>분담 대조</small></div><div class="ra">에이전트<small>OCR·교차 수행</small></div></div>
+      <div class="ba-row"><div class="rl">검증 방식</div><div class="rb">출력물<small>분담 대조</small></div><div class="ra">에이전트<small>AI Builder 교차 수행</small></div></div>
       <div class="ba-res">
         <div class="rl">결과</div>
         <div class="rcell bad">⚠ 매 회차 오류 누락 가능성 존재</div>
@@ -681,7 +682,7 @@
     <div class="ops-chat rv d2">
       <div class="ops-bar"><div class="ava">F</div><div class="nm">자금팀 에이전트_프라이데이 <span class="vf">✓</span><small>신한캐피탈 자금팀 · 사내 전용</small></div></div>
       <div class="msg-u"><div class="bub">527 회차 검증해줘</div></div>
-      <div class="msg-a"><div class="bub">527회차 공시서류 검증이 완료되었습니다.<br><b>검증 대상</b> — 발행개요, 일괄신고추가서류, 인수계약서, 기업실사보고서, 투자설명서, 증권발행실적보고서 (6종)<div class="done">✓ 표준 리포트가 [결과] 폴더에 자동 저장됨</div></div></div>
+      <div class="msg-a"><div class="bub">527회차 공시서류 검증이 완료되었습니다.<br><b>검증 대상</b> — 발행개요(기준) + 공시서류 6종: 일괄신고추가서류 · 인수계약서 · 기업실사보고서 · 투자설명서 · 증권발행실적보고서 · 원리금지급대행계약서<div class="done">✓ 표준 리포트가 [결과] 폴더에 자동 저장됨</div></div></div>
     </div>
 
     <div class="ops-folder rv d3">
@@ -712,7 +713,7 @@
 
       <div class="stp-stage">
         <div class="stp-panel active" data-panel="1">
-          <div class="stp-cap"><b>서류 준비</b> [입력] 폴더에 6종 드래그-앤-드롭<em>약 30초</em></div>
+          <div class="stp-cap"><b>서류 준비</b> [입력] 폴더에 발행개요 + 공시서류 6종 드래그-앤-드롭<em>약 30초</em></div>
           <div class="mw">
             <div class="mw-bar"><span class="dt r"></span><span class="dt y"></span><span class="dt g"></span><span class="mw-url">shinhancap.sharepoint.com</span></div>
             <div class="mw-body">
@@ -780,7 +781,7 @@
       <div class="pn">PILLAR 01 · CROSS-DOCUMENT</div>
       <div class="pt">다중 문서 교차 검증</div>
       <div class="pd">기준파일과 6개 공시서류를 항목별로 비교. <b>같은 발행조건이 서류 간 다르게 적혀 있으면 즉시 잡아냅니다.</b> 여러 섹션에 흩어진 항목도 모두 추적해 일관성을 확인합니다.</div>
-      <div class="pex"><b>예시</b> "발행비용율"이 두 곳에 등장 → 두 곳을 모두 찾아 일치 검증</div>
+      <div class="pex"><b>예시</b> "발행제비용"이 두 곳에 등장 → 두 곳을 모두 찾아 일치 검증</div>
     </div>
     <div class="pillar rv d2">
       <div class="pn">PILLAR 02 · ALGORITHM-BASED</div>
@@ -846,12 +847,15 @@
   <div class="wrap">
     <div class="ko-h rv">Roadmap & Scale · 확장성</div>
     <h2 class="rv">한 부서의 사례가 아닌,<br><span class="hl">그룹 공통의 통제 자산.</span></h2>
+    <p class="lead rv d1">「프라이데이」는 두 방향으로 넓어집니다 — 자금업무 <b>안에서 더 깊게(로드맵)</b>, 그리고 같은 검증 방식을 <b>다른 업무로(그룹 확장)</b>.</p>
+
+    <div class="ko-h rv d1" style="margin-top:40px">① 제품 로드맵 · 자금업무 안에서의 진화</div>
     <div class="road">
       <div class="phase live rv d1">
         <div class="phase-top"><div class="pp">P1</div><div class="pdate">2026.04<br>— NOW</div></div>
         <div class="badge on">운영 중</div>
         <div class="ph2">공시서류 자동 검증</div>
-        <ul><li>6종 공시서류 자동 교차 검증</li><li>수백 개 검증 항목 자동 대조</li><li>표준 리포트 자동 생성 · 보존</li></ul>
+        <ul><li>공시서류 6종 자동 교차 검증</li><li>수백 개 검증 항목 자동 대조</li><li>표준 리포트 자동 생성 · 보존</li></ul>
         <div class="pres">운영 실적 — <b>12시간 → 5분</b>, 검증 완료</div>
       </div>
       <div class="phase rv d2">
@@ -868,8 +872,9 @@
       </div>
     </div>
 
-    <div class="rv d3" style="margin-top:40px">
-      <div class="ko-h">동일 패턴 · 6개 통제 도메인</div>
+    <div class="ko-h rv d2" style="margin-top:40px">② 그룹 확장 · 같은 방식, 다른 검증 업무</div>
+    <div class="rv d2">
+      <p class="lead" style="margin-top:0">여러 서류를 기준과 대조해 어긋난 값을 잡아내는 이 방식은, <b>서류 검증이 필요한 다른 업무에도 그대로 쓸 수 있습니다.</b> 검증하는 서류와 영역만 바뀔 뿐, 작동 원리는 회사채 검증과 같습니다. 예를 들면:</p>
       <div class="domains">
         <div class="dm"><div class="dc">01 · CREDIT</div><div class="dt">여신 · 심사</div></div>
         <div class="dm"><div class="dc">02 · COMPLIANCE</div><div class="dt">준법감시</div></div>
@@ -878,7 +883,6 @@
         <div class="dm"><div class="dc">05 · INVESTOR</div><div class="dt">투자자 보호</div></div>
         <div class="dm"><div class="dc">06 · FX·DERIV</div><div class="dt">외환 · 파생</div></div>
       </div>
-      <div class="dmnote">즉시 적용 가능 그룹사 <b>6+</b> · 연간 발행 회차 <b>100+</b> · 절감 가능 인시 <b>1,200H+</b></div>
     </div>
   </div>
 </section>
@@ -898,7 +902,7 @@
       <div class="ch">부스에서 <span class="hl">직접</span> 확인하세요.</div>
       <div class="cta-list">
         <div class="cta-item"><span class="ci">▸</span><div><b>라이브 데모 시연 중</b><br><span>회차번호 한 줄 → 5분 검증을 현장에서 바로 확인</span></div></div>
-        <div class="cta-item"><span class="ci">▸</span><div><b>문서 검증이 필요한 업무라면 어디든</b><br><span>여신·준법·AML·ESG·투자자보호 등 — 같은 패턴이면 그대로 확장 가능</span></div></div>
+        <div class="cta-item"><span class="ci">▸</span><div><b>문서 검증이 필요한 업무라면 어디든</b><br><span>여신·준법·AML·ESG·투자자보호 등 — 검증 방식은 그대로, 적용 업무만 넓히면 됩니다</span></div></div>
       </div>
       <div class="cta-contact">
         <div class="nm">이동원 · 신한캐피탈 자금팀</div>
